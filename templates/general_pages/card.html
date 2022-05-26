@@ -1,0 +1,37 @@
+
+
+<div class="main main1 main2">
+<section class="cards">
+    <div class="card">
+    
+      <div class="card__content">
+        <p class="card__title text--medium">
+          Staff NO :{{user.staffno}}
+        </p>
+        <div class="card__info">
+          <p class="text--medium"><button id="myBtn">Open Modal</button></p>
+          <p class="card__price text--medium">Staff Name: {{user.staffname}}</p>
+        </div>
+      </div>
+    </div>
+</section>
+<button onclick="document.getElementById('id01').style.display='block'">Open Modal</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="#">
+    <div class="container">
+      <h1>Delete Account for Staff NO: {{user.staffno}}</h1>
+      <p>Staff Name: {{user.staffname}}</p>
+
+      <div class="clearfix">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <button type="button" class="deletebtn">Delete</button>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+
+
+

@@ -1,0 +1,66 @@
+{% extends "shared/base.html" %}
+
+
+{% block title %}
+<title>Job Board</title>
+{% endblock %}
+ {% block content %}
+ <div class="container">
+    <div class="row">
+      <h5 class="display-5">Equipment Registeration </h5>
+      <div class="text-danger font-weight-bold">
+          {% for error in errors %}
+            <li>{{error}}</li>
+          {% endfor %}
+      </div>
+    </div>
+<div class="form_wrapper">
+    <div class="form_container">
+        <div class="title_container">
+            <h2> Register Equipment</h2>
+        </div>
+        <div class="row clearfix">
+            <div class="">
+                <!-- <form method="POST">
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                        <input type="text" name="staffno" class="form-control" placeholder="staffno" required />
+                    </div>
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                        <input type="text" name="staffname" class="form-control" placeholder="First Name" />
+                    </div>
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                        <input type="password" name="password"  class="form-control" placeholder="Password" required />
+                    </div>
+                    <div class="input_field">
+                        <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                        <input type="password" name="password" class="form-control"  placeholder="Re-type Password" required />
+                    </div>
+                                 
+                                      
+                    <input class="button" type="submit" value="Register" />
+                </form> -->
+
+                <form method="POST">
+                    <div class="mb-3">
+                      <label>SN</label>
+                      <input type="text" required class="form-control" name="sn" value="{{sn}}" placeholder="Enter Equipment SN">
+                    </div>
+                    <div class="mb-3">
+                      <label>Equipment Model</label>
+                      <input type="text" required placeholder="Enter Equipment Model" name="model" value="{{model}}" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                      <label>Equipment Location</label>
+                      <input type="text" required placeholder="Enter Equipment Location" value="{{location}}" name="location" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

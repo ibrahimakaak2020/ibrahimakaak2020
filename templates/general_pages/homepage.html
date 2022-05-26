@@ -1,0 +1,28 @@
+{% extends "shared/base.html" %}
+
+
+{% block title %}
+<title>Job Board</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="display-4">computer equepment  <----->  company </----->...</h1>
+</div>
+
+<ul>
+  {% with msg=msg %}
+  {% if msg %}
+  <div class="alert alert-info" role="alert">
+    {{msg}}
+  </div>
+{% endif %}
+  {%endwith%}
+</ul>
+<ul>
+  {% for user in users %}
+  {% include "general_pages/card.html" %}
+ {%endfor%}
+
+</ul>
+{% endblock %} 
